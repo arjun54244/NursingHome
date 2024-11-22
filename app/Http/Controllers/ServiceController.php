@@ -16,10 +16,32 @@ class ServiceController extends Controller
     }
     public function ServiceDep(string $department)
     {
-        // $services = Service::all();
+        
         $servicesDec = Service::all()->where('department','=',$department);
+        
         $testimonial = Testimonial::all();
         return view('service' , compact('servicesDec', 'testimonial'));
+    }
+    //ServiceDepartment
+    public function ServiceDepartment(){
+        $allowedDepartments = [
+            'GeneralSurgery',
+            'GynecologyAndObstetrics',
+            'InternalMedicine',
+            'PediatricChildSpecialist',
+            'Anaesthesiology',
+            'LaserLaprascopicSurgeon',
+            'Endocrinologist',
+            'Ultrasound',
+            'PathologyAndLab'
+        ];
+
+        $servicesDec = Service::where('status', 1)
+        ->whereIn('department', $allowedDepartments)
+        ->get();
+
+       
+        return view('service' , compact('servicesDec'));
     }
     public function show($slug)
     {

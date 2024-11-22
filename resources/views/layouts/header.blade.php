@@ -57,7 +57,7 @@
                     <!-- Topbar Contact Information Start -->
                     <div class="topbar-contact-info">
                         <ul>
-                            <li><a href="tel:+918448973455"><img src="{{asset('images/icon-phone.svg')}}" alt=""> +91 84489 73455</a></li>
+                            <li><a href="tel:+919818406887"><img src="{{asset('images/icon-phone.svg')}}" alt=""> +91 98184 06887</a></li>
                             <li><a href="mailto:info@singhnursinghome.com"><img src="{{asset('images/icon-mail.svg')}}" alt=""> info@singhnursinghome.com</a></li>
                             <li class="hide-mobile"><a href="#"><img src="{{asset('images/icon-location.svg')}}" alt=""> D-236, Vivek Vihar Phase I, Vivek Vihar, Delhi, 110095</a></li>
                         </ul>
@@ -100,20 +100,46 @@
                                 <li class="nav-item"><a class="nav-link" href="{{route('about')}}">About Us</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{{route('doctores')}}">Team</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{{route('gallery')}}">Gallery</a></li>
-                                <li class="nav-item submenu"><a class="nav-link" href="#">Services</a>
+                                <li class="nav-item submenu"><a class="nav-link" href="#">Department</a>
                                     <ul>
 
                                         @php
                                         $services = App\Models\Service::where('status',1)->get();
+                                    
+                                        $departments = App\Models\Department::get();
                                         @endphp
-                                        <li class="nav-item"><a class="nav-link" href="{{route('service')}}">Services</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{{route('ServiceDepartment')}}">Deprtments</a></li>
+                                        @foreach($departments as $department)
+                                            <li class="nav-item"><a class="nav-link" href="{{route('department',$department->slug)}}" >{{ preg_replace('/([a-z])([A-Z])/s', '$1 $2',$department->slug )}}</a></li>
+                                        @endforeach
 
-                                        @foreach ($services->unique('department') as $service)
+                                        @foreach ($services->unique('department')->where('department', 'Gynae') as $service)
                                         <li class="nav-item">
                                             <a class="nav-link" href="{{ route('ServiceDep', $service->department) }}">
-                                                {{ preg_replace('/([a-z])([A-Z])/s', '$1 $2', $service->department) }}
+                                            Gynaecology
                                             </a>
                                         </li>
+                                        @endforeach
+                                        @php
+                                            $allowedDepartments = [
+                                                'GeneralSurgery',
+                                                'GynecologyAndObstetrics',
+                                                'InternalMedicine',
+                                                'PediatricChildSpecialist',
+                                                'Anaesthesiology',
+                                                'LaserLaprascopicSurgeon',
+                                                'Endocrinologist',
+                                                'Ultrasound',
+                                                'PathologyAndLab'
+                                            ];
+                                        @endphp
+
+                                        @foreach ($services->filter(fn($service) => in_array($service->department, $allowedDepartments))  as $service)
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="{{ route('service-single', $service->slug) }}">
+                                                    {{ preg_replace('/([a-z])([A-Z])/s', '$1 $2', $service->slug) }}
+                                                </a>
+                                            </li>
                                         @endforeach
                                     </ul>
                                 </li>

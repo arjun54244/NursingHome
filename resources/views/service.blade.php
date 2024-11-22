@@ -39,7 +39,7 @@ Services
             <div class="service-item wow fadeInUp">
                 <!-- Icon Box Start -->
                 <div class="icon-box">
-                    <img src="storage/{{$service->icon}}" alt="">
+                    <img src="{{ asset('storage/' . $service->icon) }}" alt="">
                 </div>
                 <!-- Icon Box End -->
 
@@ -68,7 +68,7 @@ Services
             <div class="service-item wow fadeInUp">
                 <!-- Icon Box Start -->
                 <div class="icon-box">
-                    <img src="storage/{{$service->icon}}" alt="">
+                    <img src="{{ asset('storage/' . $service->icon) }}" alt="">
                 </div>
                 <!-- Icon Box End -->
 

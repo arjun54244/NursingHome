@@ -16,7 +16,7 @@ Contact Us
 					<h1 class="text-anime-style-2" data-cursor="-opaque">Contact Us</h1>
 					<nav class="wow fadeInUp">
 						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="index-2.html">home</a></li>
+							<li class="breadcrumb-item"><a href="/">home</a></li>
 							<li class="breadcrumb-item active" aria-current="page">contact us</li>
 						</ol>
 					</nav>
@@ -82,8 +82,8 @@ Contact Us
 					<!-- Contact Info Content Start -->
 					<div class="contact-info-content">
 						<h3>Phone</h3>
-						<p>(+91) 789 3456 012</p>
-						<p>(+91) 879 526 789</p>
+						<p><a href="tel:+917893456012">(+91) 789 3456 012</a></p>
+						<p><a href="tel:+91879526789">(+91) 879 526 789</a></p>
 					</div>
 					<!-- Contact Info Content End -->
 				</div>

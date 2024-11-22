@@ -38,7 +38,7 @@ About
                 <div class="about-us-image">
                     <div class="about-img">
                         <figure class="reveal image-anime">
-                            <img src="images/home/1.png" alt="">
+                            <img src="images/home/about.jpeg" alt="">
                         </figure>
 
                         <!-- Company Experience Box Start -->
@@ -47,7 +47,7 @@ About
                                 <img src="images/icon-experience.svg" alt="">
                             </div>
                             <div class="company-experience-content">
-                                <h3><span class="counter">36</span>+</h3>
+                                <h3><span class="counter">50</span>+</h3>
                                 <p>years of experience</p>
                             </div>
                         </div>
@@ -62,7 +62,7 @@ About
                     <!-- Section Title Start -->
                     <div class="section-title">
                         <h3 class="wow fadeInUp">About Us</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">We Are The Best For<span>Nursing Care</span></h2>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">We Are The Best For<span>Affordable Healthcare</span></h2>
                         <p class="wow fadeInUp" data-wow-delay="0.25s">
                             At Singh Nursing Home, we offer a range of healthcare services designed to meet the needs of every patient, from preventive care to treatment and recovery. Our dedicated team of doctors, nurses, and support staff work round the clock to ensure that you receive the best possible care with a personal touch.
                         </p>
@@ -204,7 +204,7 @@ About
 
                     <!-- Company Counter Content Start -->
                     <div class="company-counter-content">
-                        <h3><span class="counter">70</span>k+</h3>
+                        <h3><span class="counter">1</span>L+</h3>
                         <p>Patients Treated</p>
                     </div>
                     <!-- Company Counter Content End -->
@@ -223,8 +223,8 @@ About
 
                     <!-- Company Counter Content Start -->
                     <div class="company-counter-content">
-                        <h3><span class="counter">78</span>+</h3>
-                        <p>Experienced Therapists</p>
+                        <h3><span class="counter">4.5</span>+</h3>
+                        <p>Google Rating</p>
                     </div>
                     <!-- Company Counter Content End -->
                 </div>
@@ -242,8 +242,8 @@ About
         <div class="row section-row">
             <!-- Section Title Start -->
             <div class="section-title">
-                <h3 class="wow fadeInUp">Vision to Victory</h3>
-                <h2 class="text-anime-style-2" data-cursor="-opaque"><span>We're a Recognized</span> & Quality Leader</h2>
+                <h3 class="wow fadeInUp">Vision for Affordable Treatments</h3>
+                <h2 class="text-anime-style-2" data-cursor="-opaque"><span>We're a Recognized</span> & Expert Doctors</h2>
             </div>
             <!-- Section Title End -->
         </div>
@@ -375,17 +375,17 @@ About
                     <div class="section-title">
                         <h3 class="wow fadeInUp">Your Wellness our misson</h3>
                         <h2 class="text-anime-style-2" data-cursor="-opaque"><span>We Are Committed</span> to Quality Care</h2>
-                        <p class="wow fadeInUp" data-wow-delay="0.25s">At Singh Nursing Home, we understand that pain and injuries can arise at any moment. Our emergency physiotherapy services are designed to provide swift and effective treatment, helping you manage discomfort and promoting a quick recovery.</p>
+                        <p class="wow fadeInUp" data-wow-delay="0.25s">At Singh Nursing Home, our commitment to quality care drives everything we do. We aim to provide exceptional healthcare with compassion, expertise, and integrity. Here’s how we ensure the highest standards of care for all our patients: </p>
                     </div>
                     <!-- Section Title End -->
 
                     <!-- Quality Treatment Body Start -->
                     <div class="quality-treatment-body wow fadeInUp" data-wow-delay="0.5s">
                         <ul>
-                            <li>Skilled physiotherapists dedicated to your healing journey.</li>
-                            <li>Rapid response to injuries to minimize recovery time.</li>
-                            <li>Tailored treatment plans focused on your individual needs.</li>
-                            <li>Comprehensive rehabilitation services for holistic recovery.</li>
+                            <li>We prioritize each patient’s needs, preferences, and comfort.</li>
+                            <li> Our highly skilled medical professionals bring years of experience and a compassionate approach .</li>
+                            <li>Equipped with modern medical technology</li>
+                            <li> We maintain stringent hygiene and safety protocols to create a safe environment.</li>
                         </ul>
                     </div>
                     <!-- Quality Treatment Body End -->
@@ -396,110 +396,6 @@ About
         </div>
     </div>
 </div>
-<!-- Quality Treatment Section End -->
-
-<!-- Therapy Process Start -->
-<div class="therapy-process">
-    <div class="container">
-        <div class="row section-row">
-            <div class="col-lg-12">
-                <!-- Section Title Start -->
-                <div class="section-title">
-                    <h3 class="wow fadeInUp">Therapy Process</h3>
-                    <h2 class="text-anime-style-2" data-cursor="-opaque"><span>Understanding</span> the Therapy Process</h2>
-                </div>
-                <!-- Section Title End -->
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-3 col-md-6">
-                <!-- Therapy Process Item Start -->
-                <div class="therapy-process-item wow fadeInUp">
-                    <!-- Icon Box Start -->
-                    <div class="icon-box">
-                        <figure class="image-anime">
-                            <img src="images/therapy-process-1.jpg" alt="Get Paired with a Therapist">
-                        </figure>
-                    </div>
-                    <!-- Icon Box End -->
-
-                    <!-- Therapy Process Content Start -->
-                    <div class="therapy-process-content">
-                        <h3>Get Paired with a Therapist</h3>
-                        <p>We ensure you are matched with a qualified therapist who understands your specific needs and concerns.</p>
-                    </div>
-                    <!-- Therapy Process Content End -->
-                </div>
-                <!-- Therapy Process Item End -->
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <!-- Therapy Process Item Start -->
-                <div class="therapy-process-item wow fadeInUp" data-wow-delay="0.25s">
-                    <!-- Icon Box Start -->
-                    <div class="icon-box">
-                        <figure class="image-anime">
-                            <img src="images/therapy-process-2.jpg" alt="Choose Your Preferred Way to Receive Care">
-                        </figure>
-                    </div>
-                    <!-- Icon Box End -->
-
-                    <!-- Therapy Process Content Start -->
-                    <div class="therapy-process-content">
-                        <h3>Choose Your Preferred Way to Receive Care</h3>
-                        <p>We offer various options for receiving treatment, including in-person and telehealth sessions, ensuring convenience and comfort.</p>
-                    </div>
-                    <!-- Therapy Process Content End -->
-                </div>
-                <!-- Therapy Process Item End -->
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <!-- Therapy Process Item Start -->
-                <div class="therapy-process-item wow fadeInUp" data-wow-delay="0.5s">
-                    <!-- Icon Box Start -->
-                    <div class="icon-box">
-                        <figure class="image-anime">
-                            <img src="images/therapy-process-3.jpg" alt="We Help You Get Better, Faster!">
-                        </figure>
-                    </div>
-                    <!-- Icon Box End -->
-
-                    <!-- Therapy Process Content Start -->
-                    <div class="therapy-process-content">
-                        <h3>We Help You Get Better, Faster!</h3>
-                        <p>Our focused therapy sessions are designed to speed up your recovery process and improve your quality of life.</p>
-                    </div>
-                    <!-- Therapy Process Content End -->
-                </div>
-                <!-- Therapy Process Item End -->
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <!-- Therapy Process Item Start -->
-                <div class="therapy-process-item wow fadeInUp" data-wow-delay="0.75s">
-                    <!-- Icon Box Start -->
-                    <div class="icon-box">
-                        <figure class="image-anime">
-                            <img src="images/therapy-process-4.jpg" alt="What Psychotherapy Can Help With">
-                        </figure>
-                    </div>
-                    <!-- Icon Box End -->
-
-                    <!-- Therapy Process Content Start -->
-                    <div class="therapy-process-content">
-                        <h3>What Psychotherapy Can Help With</h3>
-                        <p>Our psychotherapy services can assist with various mental health challenges, providing the support you need to overcome them.</p>
-                    </div>
-                    <!-- Therapy Process Content End -->
-                </div>
-                <!-- Therapy Process Item End -->
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Therapy Process End -->
 
 
 <!-- Client Testimonial Start -->
@@ -574,8 +470,8 @@ About
             <div class="col-lg-9">
                 <!-- Section Title Start -->
                 <div class="section-title">
-                    <h3 class="wow fadeInUp">theraphist team</h3>
-                    <h2 class="text-anime-style-2" data-cursor="-opaque"><span>Our Dedicated</span> & Experienced Therapist Team</h2>
+                    <h3 class="wow fadeInUp">Doctors</h3>
+                    <h2 class="text-anime-style-2" data-cursor="-opaque"><span>Our Dedicated</span> & Experienced Doctors</h2>
                 </div>
                 <!-- Section Title End -->
             </div>
@@ -591,9 +487,10 @@ About
 
         <div class="row">
             @php
-            $doctors = App\Models\Team::all();
+            $doctors = App\Models\Team::whereIn('id', [4, 8, 2, 1])
+            ->orderByRaw("FIELD(id, 4, 8, 2, 1)")->get()->take(4);
             @endphp
-            @foreach ($doctors->take(4) as $doctor)
+            @foreach ($doctors as $doctor)
             <div class="col-lg-3 col-md-6">
                 <!-- Team Member Item Start -->
                 <a href="{{route('doctor.details',$doctor->slug)}}">

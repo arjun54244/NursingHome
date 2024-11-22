@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\EmailController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TeamController;
 use App\Models\Blog;
@@ -17,7 +18,8 @@ Route::get('/about', function () {
 })->name('about');
 
 Route::get('/service', [ServiceController::class, 'index'])->name('service');
-Route::get('/service/{department}', [ServiceController::class, 'ServiceDep'])->name('ServiceDep');
+Route::get('/services/{department}', [ServiceController::class, 'ServiceDep'])->name('ServiceDep');
+Route::get('/ServiceDepartment', [ServiceController::class, 'ServiceDepartment'])->name('ServiceDepartment');
 Route::get('/service/{slug}', [ServiceController::class, 'show'])->name('service-single');
 
 // Route::get('/blogs', function () {
@@ -38,6 +40,8 @@ Route::get('/gallery', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
+
+Route::get('send-email', [EmailController::class, 'sendEmail'])->name('send-email');
 
 // set 404 page
 Route::fallback(function () {

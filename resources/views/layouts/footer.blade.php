@@ -6,14 +6,14 @@
             <span><img src="{{asset('images/icon-sparkles.svg')}}" alt="">Emergency No. : (+91) 789 3456 012</span>
             <span><img src="{{asset('images/icon-sparkles.svg')}}" alt="">For any additional inquiries : <a href="mailto:info@singhnursinghome.com">info@singhnursinghome.com</a></span>
             <span><img src="{{asset('images/icon-sparkles.svg')}}" alt="">Book Appointment: (+91) 879 526 789</span>
-            <span><img src="{{asset('images/icon-sparkles.svg')}}" alt="">Opening Hours: Mon to Fri: 9:00 AM to 8:00 PM, Sat: 9:00 AM to 8:00 PM, Sun: 9:00 AM to 2:00 PM</span>
+            <span><img src="{{asset('images/icon-sparkles.svg')}}" alt="">OPD Hours: Mon to Fri: 9:00 AM to 8:00 PM, Sat: 9:00 AM to 8:00 PM, Sun: 9:00 AM to 2:00 PM</span>
         </div>
 
         <div class="scrolling-content">
             <span><img src="{{asset('images/icon-sparkles.svg')}}" alt="">Emergency No. : (+91) 789 3456 012</span>
             <span><img src="{{asset('images/icon-sparkles.svg')}}" alt="">For any additional inquiries : <a href="mailto:info@singhnursinghome.com">info@singhnursinghome.com</a></span>
             <span><img src="{{asset('images/icon-sparkles.svg')}}" alt="">Book Appointment: (+91) 879 526 789</span>
-            <span><img src="{{asset('images/icon-sparkles.svg')}}" alt="">Opening Hours: Mon to Fri: 9:00 AM to 8:00 PM, Sat: 9:00 AM to 8:00 PM, Sun: 9:00 AM to 2:00 PM</span>
+            <span><img src="{{asset('images/icon-sparkles.svg')}}" alt="">OPD Hours: Mon to Fri: 9:00 AM to 8:00 PM, Sat: 9:00 AM to 8:00 PM, Sun: 9:00 AM to 2:00 PM</span>
         </div>
     </div>
 </div>
@@ -41,9 +41,9 @@
                     <!-- Footer Social Links Start -->
                     <div class="footer-social-links">
                         <ul>
-                            <li><a href="https://www.facebook.com/singhnursinghome" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="https://www.facebook.com/profile.php?id=61566414132700" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
                             <li><a href="https://twitter.com/singhnursinghome" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
-                            <li><a href="https://www.linkedin.com/company/singhnursinghome" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                            <li><a href="https://www.linkedin.com/company/singh-nursing-home/?viewAsMember=true" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
                             <li><a href="https://www.instagram.com/singhnursinghome" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
                         </ul>
                     </div>
@@ -56,7 +56,7 @@
             <div class="col-lg-3 col-md-4">
                 <!-- About Links Start -->
                 <div class="about-working-hour">
-                    <h3>Opening hours</h3>
+                    <h3>OPD hours</h3>
                     <ul>
                         <li>mon to fri : 9:00 to 8:00</li>
                         <li>sat : 9:00AM to 8:00PM</li>

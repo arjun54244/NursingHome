@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class TeamController extends Controller
 {
     public function index(){
-        $doctors = Team::all();
+        $doctors = Team::orderByRaw("FIELD(id, 4, 8, 2, 1, 3, 5, 6,7)")->get();
         return view('team', compact('doctors'));
     }
 

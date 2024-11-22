@@ -41,7 +41,7 @@ Home
                             <div class="col-lg-4 col-md-4 col-auto">
                                 <!-- Hero Counter Box Start-->
                                 <div class="hero-counter-box">
-                                    <h3><span class="counter">36</span>+</h3>
+                                    <h3><span class="counter">50</span>+</h3>
                                     <p>Years of Experience</p>
                                 </div>
                                 <!-- Hero Counter Box End-->
@@ -50,7 +50,7 @@ Home
                             <div class="col-lg-4 col-md-4 col-auto">
                                 <!-- Hero Counter Box Start-->
                                 <div class="hero-counter-box">
-                                    <h3><span class="counter">50</span>k+</h3>
+                                    <h3><span class="counter">1</span>L+</h3>
                                     <p>Happy Patients</p>
                                 </div>
                                 <!-- Hero Counter Box End-->
@@ -68,7 +68,7 @@ Home
                     <!-- Hero Img Start -->
                     <div class="hero-img">
                         <figure>
-                            <img src="images/hero-img.png" alt="">
+                            <img src="images/hospital.jpeg" alt="">
                         </figure>
                     </div>
                     <!-- Hero Img End -->
@@ -167,7 +167,7 @@ Home
                 <div class="about-us-image">
                     <div class="about-img">
                         <figure class="reveal image-anime">
-                            <img src="images/home/1.png" alt="">
+                            <img src="images/home/about.jpeg" alt="">
                         </figure>
 
                         <!-- Company Experience Box Start -->
@@ -176,7 +176,7 @@ Home
                                 <img src="images/icon-experience.svg" alt="">
                             </div>
                             <div class="company-experience-content">
-                                <h3><span class="counter">36</span>+</h3>
+                                <h3><span class="counter">50</span>+</h3>
                                 <p>years of experience</p>
                             </div>
                         </div>
@@ -191,7 +191,7 @@ Home
                     <!-- Section Title Start -->
                     <div class="section-title">
                         <h3 class="wow fadeInUp">About Us</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">We Are The Best For <span>Nursing Care</span></h2>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">We Are The Best For <span>Affordable Healthcare</span></h2>
                         <p class="wow fadeInUp" data-wow-delay="0.25s">At Singh Nursing Home, we offer a range of healthcare services designed to meet the needs of every patient, from preventive care to treatment and recovery. Our dedicated team of doctors, nurses, and support staff work round the clock to ensure that you receive the best possible care with a personal touch.</p>
                     </div>
                     <!-- Section Title End -->
@@ -247,19 +247,19 @@ Home
                     <!-- About Us Footer Start -->
                     <div class="about-us-footer">
                         <!-- Doctor Info Start -->
-                        <div class="doctor-info wow fadeInUp" data-wow-delay="1s">
-                            <div class="doctor-info-item">
-                                <div class="image-box">
-                                    <figure class="image-anime">
-                                        <img src="images/about-doctor-img.jpg" alt="">
-                                    </figure>
-                                </div>
-                                <div class="doctor-info-content">
-                                    <h3>Our Medical Team</h3>
-                                    <p>Dedicated professionals committed to your care.</p>
-                                </div>
-                            </div>
-                        </div>
+                        <!--<div class="doctor-info wow fadeInUp" data-wow-delay="1s">-->
+                            <!--<div class="doctor-info-item">-->
+                            <!--    <div class="image-box">-->
+                            <!--        <figure class="image-anime">-->
+                            <!--            <img src="images/about-doctor-img.jpg" alt="">-->
+                            <!--        </figure>-->
+                            <!--    </div>-->
+                            <!--    <div class="doctor-info-content">-->
+                            <!--        <h3>Our Medical Team</h3>-->
+                            <!--        <p>Dedicated professionals committed to your care.</p>-->
+                            <!--    </div>-->
+                            <!--</div>-->
+                        <!--</div>-->
                         <!-- Doctor Info End -->
 
                         <!-- Appointment Button Start -->
@@ -284,8 +284,8 @@ Home
             <div class="col-lg-7">
                 <!-- Section Title Start -->
                 <div class="section-title">
-                    <h3 class="wow fadeInUp">Services</h3>
-                    <h2 class="text-anime-style-2" data-cursor="-opaque"><span>We Provide</span> The Best Services</h2>
+                    <h3 class="wow fadeInUp">Departments</h3>
+                    <h2 class="text-anime-style-2" data-cursor="-opaque"><span>We Provide</span> The Best Treatments</h2>
                 </div>
                 <!-- Section Title End -->
             </div>
@@ -298,11 +298,52 @@ Home
                 <!-- Section Button End -->
             </div>
         </div>
-        @php
-        $services = App\Models\Service::all()->take(6);
-        @endphp
+        
         <div class="row">
-            @foreach ($services as $service)
+        @php
+         $allowedDepartments = [
+             'GeneralSurgery',
+             'GynecologyAndObstetrics',
+             'InternalMedicine',
+             'PediatricChildSpecialist',
+             'Anaesthesiology',
+             'LaserLaprascopicSurgeon',
+             'Endocrinologist',
+             'Ultrasound',
+             'PathologyAndLab'
+         ];
+         $services = App\Models\Service::where('status', 1)
+        ->whereIn('department', $allowedDepartments)
+        ->take(6)
+        ->get();
+            @endphp
+            <div class="col-lg-3 col-md-6">
+                <!-- Service Item Start -->
+                <div class="service-item wow fadeInUp">
+                    <!-- Icon Box Start -->
+                    <div class="icon-box">
+                        <img src="storage/service/01JAQ3BA3C8CRQHPJCE96CPH92.png" alt="">
+                    </div>
+                    <!-- Icon Box End -->
+
+                    <!-- Service Body Start -->
+                    <div class="service-body">
+                        <h3>gynaecology and obstetrics</h3>
+                        <p>{{substr('At Singh Nursing Home, we specialize in both gynecology and obstetrics, offering comprehensive care for women throughout every stage of life. Our gynecology services include routine screenings, treatment for menstrual disorders, fertility management, menopause support, and the diagnosis and management of reproductive health conditions such as fibroids, endometriosis', 0,100)}}...</p>
+                    </div>
+                    <!-- Service Body End -->
+
+                    <!-- Service Footer Start -->
+                    <div class="service-footer">
+                        <!-- if department is Gynae  -->
+                         <a href="{{ route('ServiceDep', 'Gynae') }}" class="service-btn"><img src="images/arrow-white.svg" alt="">
+                         </a>
+                    </div>
+                    <!-- Service Footer End -->
+                </div>
+                <!-- Service Item End -->
+            </div>
+            @foreach ($services->filter(fn($service) => in_array($service->department ,$allowedDepartments))  as $service)
             <div class="col-lg-3 col-md-6">
                 <!-- Service Item Start -->
                 <div class="service-item wow fadeInUp">
@@ -321,6 +362,7 @@ Home
 
                     <!-- Service Footer Start -->
                     <div class="service-footer">
+                        <!-- if department is Gynae  -->
                         <a href="{{route('service-single', $service->slug)}}" class="service-btn"><img src="images/arrow-white.svg" alt="">
                         </a>
                     </div>
@@ -343,7 +385,7 @@ Home
                     <!-- Service Body Start -->
                     <div class="service-body">
                         <h3>Ready to Start Your Journey to Recovery?</h3>
-                        <p>We understand that injuries and acute pain can happen unexpectedly. Our emergency physiotherapy services are here to support you.</p>
+                        <p>At Singh Nursing Home, your recovery is our priority. With compassionate care, advanced facilities, and expert professionals, we ensure a seamless healing journey tailored to your needs. Begin your path to wellness today!</p>
                     </div>
                     <!-- Service Body End -->
 
@@ -370,13 +412,13 @@ Home
                 <div class="solution-plan-image">
                     <div class="solution-plan-img-1">
                         <figure class="image-anime reveal">
-                            <img src="images/home/Normal Delivery.png" alt="">
+                            <img src="images/home/nisha.png" alt="">
                         </figure>
                     </div>
 
                     <div class="solution-plan-img-2">
                         <figure class="image-anime reveal">
-                            <img src="images/home/Ultrasound.png" alt="">
+                            <img src="images/home/shyam.png" alt="">
                         </figure>
                     </div>
                 </div>
@@ -444,7 +486,7 @@ Home
                                     </div>
 
                                     <div class="solution-counter-content">
-                                        <h3><span class="counter">70</span>+</h3>
+                                        <h3><span class="counter">1</span>L+</h3>
                                         <p>Patients Treated</p>
                                     </div>
                                 </div>
@@ -593,7 +635,7 @@ Home
                 <div class="col-lg-12">
                     <!-- Why Choose Image Start -->
                     <div class="why-choose-image">
-                        <img src="images/why-us-img.png" alt="Why Choose Us">
+                        <img src="images/why-us-img2.png" alt="Why Choose Us">
                     </div>
                     <!-- Why Choose Image End -->
                 </div>
@@ -611,8 +653,8 @@ Home
             <div class="col-lg-9">
                 <!-- Section Title Start -->
                 <div class="section-title">
-                    <h3 class="wow fadeInUp">Team</h3>
-                    <h2 class="text-anime-style-2" data-cursor="-opaque"><span>Our Dedicated</span> & Experienced Therapist Team</h2>
+                    <h3 class="wow fadeInUp">Doctors</h3>
+                    <h2 class="text-anime-style-2" data-cursor="-opaque"><span>Our Dedicated</span> & Experienced Doctors</h2>
                 </div>
                 <!-- Section Title End -->
             </div>
@@ -620,7 +662,7 @@ Home
             <div class="col-lg-3">
                 <!-- Section Button Start -->
                 <div class="section-btn wow fadeInUp" data-wow-delay="0.25s">
-                    <a href="{{route('doctores')}}" class="btn-default">view all team</a>
+                    <a href="{{route('doctores')}}" class="btn-default">view all Doctors</a>
                 </div>
                 <!-- Section Button End -->
             </div>
@@ -628,7 +670,8 @@ Home
 
         <div class="row">
             @php
-            $doctors = App\Models\Team::all()->take(4);
+            $doctors = App\Models\Team::whereIn('id', [4, 8, 2, 1])
+            ->orderByRaw("FIELD(id, 4, 8, 2, 1)")->get()->take(4);
             @endphp
             @foreach ($doctors as $doctor)
             <div class="col-lg-3 col-md-6">
@@ -743,7 +786,7 @@ Home
                 <!-- Section Title Start -->
                 <div class="section-title">
                     <h3 class="wow fadeInUp">news & blog</h3>
-                    <h2 class="text-anime-style-2" data-cursor="-opaque"><span>Our Latest</span> Insights And Updates</h2>
+                    <h2 class="text-anime-style-2" data-cursor="-opaque"><span>Our Latest</span> Blogs And Updates</h2>
                 </div>
                 <!-- Section Title End -->
             </div>
@@ -759,9 +802,9 @@ Home
 
         <div class="row">
             @php
-            $blogs = App\Models\Blog::all()->where('status','=',1);
+            $blogs = App\Models\Blog::where('status', 1)->latest()->get();
             @endphp
-            @foreach ($blogs as $blog)
+            @foreach ($blogs->take(3) as $blog)
             <div class="col-lg-4 col-md-6">
                 <!-- Blog Item Start -->
                 <div class="blog-item wow fadeInUp">

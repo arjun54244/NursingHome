@@ -35,18 +35,24 @@ class ServiceResource extends Resource
                     ->options([
                         'Gynae' => 'Gynae',
                         'GeneralSurgery' => 'General Surgery',
+                        'GynecologyAndObstetrics' => 'Gynecology And Obstetrics',
+                        'InternalMedicine' => 'Internal Medicine',
+                        'PediatricChildSpecialist' => 'Pediatric Child Specialist',
+                        'Anaesthesiology ' => 'Anaesthesiology ',
                         'LaserLaprascopicSurgeon' => 'Laser, laprascopic surgeon',
                         'Endocrinologist' => 'Endocrinologist',
-                        'Anaesthesiology ' => 'Anaesthesiology ',
+                        'Ultrasound' => 'Ultrasound',
+                        'PathologyAndLab' => 'Pathology And Lab',
                     ])
                     ->required(),
                 TextInput::make('title'),
-                TextInput::make('short_description'),
+                TextInput::make('short_description')->maxLength(255)
+                    ->placeholder('Enter a short description (max 255 characters)'),
                 FileUpload::make('icon')
                     ->directory('service')->storeFileNamesIn('service'),
                 FileUpload::make('image')
-                    ->directory('service')->storeFileNamesIn('service'),
-                TextInput::make('image_alt_tag'),
+                    ->storeFileNamesIn('service'),
+                TextInput::make('image_alt_tag')->required(),
                 RichEditor::make('description')
                     ->toolbarButtons([
                         'attachFiles',
@@ -64,6 +70,7 @@ class ServiceResource extends Resource
                         'undo',
                         'underline',
                     ])
+                    ->required()
                     ->columnSpan('full'),
                 TextInput::make('slug'),
                 TextInput::make('meta_title'),

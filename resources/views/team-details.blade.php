@@ -16,9 +16,9 @@ doctore
 						<h1 class="text-anime-style-2" data-cursor="-opaque">{{$doctor->name}}</h1>
 						<nav class="wow fadeInUp">
 							<ol class="breadcrumb">
-								<li class="breadcrumb-item"><a href="index-2.html">home</a></li>
-                                <li class="breadcrumb-item"><a href="index-2.html">our therapists</a></li>
-								<li class="breadcrumb-item active" aria-current="page">dr. emily brown</li>
+								<li class="breadcrumb-item"><a href="/">home</a></li>
+                                <li class="breadcrumb-item"><a href="/team">our Doctor</a></li>
+								<li class="breadcrumb-item active" aria-current="page">{{$doctor->name}}</li>
 							</ol>
 						</nav>
 					</div>
@@ -50,7 +50,7 @@ doctore
                             <p class="wow fadeInUp">{{$doctor->position}}</p>
                         </div>
                         <div class="member-detail-content">
-                            <p class="wow fadeInUp" data-wow-delay="0.25s">{{$doctor->description}}</p>                            
+                            <p class="wow fadeInUp" data-wow-delay="0.25s">{!!$doctor->description!!}</p>                            
                         </div>
 
                         <div class="member-detail-body wow fadeInUp" data-wow-delay="0.5s">
