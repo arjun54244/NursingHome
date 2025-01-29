@@ -22,6 +22,7 @@ Route::get('/services/{department}', [ServiceController::class, 'ServiceDep'])->
 Route::get('/ServiceDepartment', [ServiceController::class, 'ServiceDepartment'])->name('ServiceDepartment');
 Route::get('/service/{slug}', [ServiceController::class, 'show'])->name('service-single');
 
+
 // Route::get('/blogs', function () {
 //     return view('blogs');
 // })->name('blogs');
@@ -41,7 +42,45 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
+
 Route::get('send-email', [EmailController::class, 'sendEmail'])->name('send-email');
+
+Route::get('/upload', function(){
+    $sourcePath = storage_path('app/public/blog/');
+    $destinationPath = public_path('storage/blog/');
+    
+    // Ensure the destination directory exists
+    if (!File::exists($destinationPath)) {
+        File::makeDirectory($destinationPath, 0755, true);
+    }
+    
+    // Clean the destination directory
+    if (File::exists($destinationPath)) {
+        File::deleteDirectory($destinationPath);
+        File::makeDirectory($destinationPath, 0755, true);
+    }
+    
+    // Get all files recursively in the source directory
+    $files = File::allFiles($sourcePath);
+    
+    foreach ($files as $file) {
+        // Log the file path
+        Log::info('File found: ' . $file->getPathname());
+    
+        // Define the target path for the file
+        $targetPath = $destinationPath . '/' . $file->getRelativePathname();
+    
+        // Ensure subdirectories exist in the target
+        $targetDir = dirname($targetPath);
+        if (!File::exists($targetDir)) {
+            File::makeDirectory($targetDir, 0755, true);
+        }
+    
+        // Copy the file to the destination
+        File::copy($file->getPathname(), $targetPath);
+    }
+     return redirect()->route('blogs');
+});
 
 // set 404 page
 Route::fallback(function () {
