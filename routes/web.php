@@ -45,16 +45,17 @@ Route::get('/contact', function () {
 
 Route::get('send-email', [EmailController::class, 'sendEmail'])->name('send-email');
 
-Route::get('/upload', function(){
-    $sourcePath = storage_path('app/public/blog/');
-    $destinationPath = public_path('storage/blog/');
-    
+
+Route::get('/fix', function () {
+    $sourcePath = storage_path('app/public/');
+    $destinationPath = public_path('storage'); 
+
     // Ensure the destination directory exists
     if (!File::exists($destinationPath)) {
         File::makeDirectory($destinationPath, 0755, true);
     }
     
-    // Clean the destination directory
+    // Clean the destination directory before copying
     if (File::exists($destinationPath)) {
         File::deleteDirectory($destinationPath);
         File::makeDirectory($destinationPath, 0755, true);
@@ -78,8 +79,9 @@ Route::get('/upload', function(){
     
         // Copy the file to the destination
         File::copy($file->getPathname(), $targetPath);
+        
     }
-     return redirect()->route('blogs');
+return redirect()->route('home');
 });
 
 // set 404 page
